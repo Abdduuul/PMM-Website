@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMM UNSERA - Komunitas Mahasiswa</title>
+    <link href="/style.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed top-0 left-0 right-0 z-50" x-data="{ mobileMenuOpen: false }">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-teal-600">PMM UNSERA</a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#hero" class="text-gray-600 hover:text-teal-600 transition duration-300">Beranda</a>
+                <a href="#info" class="text-gray-600 hover:text-teal-600 transition duration-300">Informasi</a>
+                <a href="#contact" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-4 rounded-full transition duration-300">Kontak</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-2xl">
+                <i class="fas" :class="mobileMenuOpen ? 'fa-times' : 'fa-bars'"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" x-cloak class="md:hidden bg-gray-50">
+            <a href="#hero" @click="mobileMenuOpen = false" class="block py-2 px-6 text-gray-600 hover:bg-gray-200">Beranda</a>
+            <a href="#info" @click="mobileMenuOpen = false" class="block py-2 px-6 text-gray-600 hover:bg-gray-200">Informasi</a>
+            <a href="#contact" @click="mobileMenuOpen = false" class="block py-2 px-6 text-gray-600 hover:bg-gray-200">Kontak</a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Hero Section -->
+        <section id="hero" class="container mx-auto px-6 py-24 flex flex-col md:flex-row items-center justify-center text-center md:text-left">
+            <div class="md:w-1/2">
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight">
+                    Selamat Datang di <span class="text-teal-600">PMM UNSERA</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-light text-gray-600 mt-4">Komunitas Mahasiswa Pertukaran Merdeka</h2>
+                <p class="text-gray-500 mt-6 max-w-lg mx-auto md:mx-0">Platform ini didedikasikan untuk seluruh mahasiswa PMM di UNSERA. Temukan informasi, terhubung dengan teman-teman, dan jelajahi kegiatan seru selama program.</p>
+                <div class="mt-8 space-x-4">
+                    <a href="#info" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-full transition duration-300">Lihat Informasi</a>
+                    <a href="#contact" class="border-2 border-gray-400 hover:bg-gray-200 text-gray-700 font-bold py-3 px-6 rounded-full transition duration-300">Hubungi Kami</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
+                 <img src="" alt="UNSERA" class="rounded-lg shadow-2xl w-full max-w-md object-cover">
+            </div>
+        </section>
+
+        <!-- Info Section -->
+        <section id="info" class="bg-white py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold">Informasi Program</h2>
+                <div class="mt-4 h-1 w-20 bg-teal-500 mx-auto"></div>
+                <p class="mt-8 max-w-3xl mx-auto text-gray-500">
+                    Program Pertukaran Mahasiswa Merdeka (PMM) adalah program mobilitas mahasiswa selama satu semester untuk mendapatkan pengalaman belajar di perguruan tinggi di Indonesia sekaligus memperkuat persatuan dalam keberagaman.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-12">
+                    <!-- Info Card 1 -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <i class="fas fa-calendar-alt text-4xl text-teal-500 mb-4"></i>
+                        <h3 class="text-2xl font-bold">Jadwal Penting</h3>
+                        <p class="mt-2 text-gray-500">Lihat jadwal kegiatan, batas waktu pendaftaran, dan tanggal-tanggal penting lainnya.</p>
+                    </div>
+                    <!-- Info Card 2 -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <i class="fas fa-users text-4xl text-teal-500 mb-4"></i>
+                        <h3 class="text-2xl font-bold">Direktori Mahasiswa</h3>
+                        <p class="mt-2 text-gray-500">Temukan dan terhubung dengan sesama mahasiswa PMM dari berbagai universitas.</p>
+                    </div>
+                    <!-- Info Card 3 -->
+                    <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+                        <i class="fas fa-map-marked-alt text-4xl text-teal-500 mb-4"></i>
+                        <h3 class="text-2xl font-bold">Panduan Lokal</h3>
+                        <p class="mt-2 text-gray-500">Dapatkan tips tentang tempat tinggal, transportasi, dan tempat menarik di sekitar Serang.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-gray-100 py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold">Hubungi Kami</h2>
+                <div class="mt-4 h-1 w-20 bg-teal-500 mx-auto"></div>
+                <p class="mt-8 max-w-2xl mx-auto text-gray-500">
+                    Punya pertanyaan atau butuh bantuan? Jangan ragu untuk menghubungi koordinator program.
+                </p>
+                <div class="mt-8">
+                    <a href="mailto:info.pmm@unsera.ac.id" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-8 rounded-full transition duration-300 text-lg">
+                        <i class="fas fa-envelope mr-2"></i> Kirim Email
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-6">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>&copy; 2024 PMM UNSERA. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/main.js"></script>
+</body>
+</html>
