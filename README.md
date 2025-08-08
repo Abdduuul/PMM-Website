@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="g.png" width="100" />
+  <img src="g.png" width="500" />
 </p>
 
 <h1 align="center">Aplikasi PMM UNSERA</h1>
