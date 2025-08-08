@@ -8,11 +8,11 @@
   Sebuah platform web informatif dan modern yang dirancang untuk menjadi pusat komunitas bagi mahasiswa Pertukaran Mahasiswa Merdeka (PMM) di Universitas Serang Raya (UNSERA).
   <br />
   <br />
-  <a href="#">Lihat Demo</a>
+  <a href="https://pmm-6wubm-c6ac7.web.app/">Lihat Demo</a>
   ·
-  <a href="https://github.com/USERNAME/REPO_NAME/issues">Laporkan Bug</a>
+  <a href="https://github.com/Abdduuul/PMM-Website/issues">Laporkan Bug</a>
   ·
-  <a href="https://github.com/USERNAME/REPO_NAME/issues">Minta Fitur</a>
+  <a href="https://github.com/Abdduuul/PMM-Website/issues">Minta Fitur</a>
 </p>
 
 ---
