@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nama: "Budi Santoso",
             universitas: "Universitas Gadjah Mada",
             daerah: "Yogyakarta",
-            foto: "https://via.placeholder.com/150"
+            foto: "h.JPG"
         },
         {
             nama: "Ani Lestari",
@@ -42,12 +42,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     mahasiswa.forEach(m => {
         const card = document.createElement('div');
-        card.className = 'card p-6';
+        card.className = 'card flex items-center p-4'; // Added flex and items-center
         card.innerHTML = `
-            <img src="${m.foto}" alt="Foto ${m.nama}" class="w-32 h-32 rounded-full mx-auto mb-4">
-            <h2 class="text-xl font-bold text-gray-800 text-center">${m.nama}</h2>
-            <p class="text-gray-600 text-center">${m.universitas}</p>
-            <p class="text-gray-500 text-center mt-2">${m.daerah}</p>
+            <div class="w-24 h-24 mr-4">
+                <img src="${m.foto}" alt="Foto ${m.nama}" class="rounded-lg w-full h-full object-cover">
+            </div>
+            <div>
+                <h2 class="text-xl font-bold text-gray-800">${m.nama}</h2>
+                <p class="text-gray-600">${m.universitas}</p>
+                <p class="text-gray-500 mt-2">${m.daerah}</p>
+            </div>
         `;
         container.appendChild(card);
     });
